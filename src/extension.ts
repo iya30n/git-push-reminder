@@ -59,25 +59,25 @@ const gitChecker = function () {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	vscode.commands.executeCommand('setContext', 'git-push-reminder.isActive', true);
+	vscode.commands.executeCommand('setContext', 'push-reminder.isActive', true);
 
 	const stopCloseEmptyWindowCommand = vscode.commands.registerCommand(
-		'git-push-reminder.keybindings.stopCloseEmptyWindow'
+		'push-reminder.keybindings.stopCloseEmptyWindow'
 		, () => { }
 	)
 
 	const closeWindowCommand = vscode.commands.registerCommand(
-		'git-push-reminder.keybindings.closeWindow'
+		'push-reminder.keybindings.closeWindow'
 		, gitChecker
 	)
 
 	const quitCommand = vscode.commands.registerCommand(
-		'git-push-reminder.keybindings.quit',
+		'push-reminder.keybindings.quit',
 		gitChecker
 	)
 
 	const quitCommandEmptyWindow = vscode.commands.registerCommand(
-		'git-push-reminder.keybindings.quitEmptyWindow'
+		'push-reminder.keybindings.quitEmptyWindow'
 		, gitChecker
 	)
 
@@ -88,5 +88,5 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-	vscode.commands.executeCommand('setContext', 'git-push-reminder.isActive', false);
+	vscode.commands.executeCommand('setContext', 'push-reminder.isActive', false);
 }

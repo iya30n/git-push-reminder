@@ -1,4 +1,4 @@
-# git-push-reminder README
+# push-reminder README
 
 do you forget to push your code? this is for you :)
 

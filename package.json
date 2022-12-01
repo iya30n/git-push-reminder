@@ -1,6 +1,7 @@
 {
-  "name": "git-push-reminder",
-  "displayName": "git-push-reminder",
+  "name": "push-reminder",
+  "publisher": "iya30n",
+  "displayName": "push-reminder",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -11,59 +12,59 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:git-push-reminder.keybindings.quit",
-    "onCommand:git-push-reminder.keybindings.quitEmptyWindow",
-    "onCommand:git-push-reminder.keybindings.closeWindow",
-    "onCommand:git-push-reminder.keybindings.stopCloseEmptyWindow"
+    "onCommand:push-reminder.keybindings.quit",
+    "onCommand:push-reminder.keybindings.quitEmptyWindow",
+    "onCommand:push-reminder.keybindings.closeWindow",
+    "onCommand:push-reminder.keybindings.stopCloseEmptyWindow"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "keybindings": [
       {
-        "command": "git-push-reminder.keybindings.quit",
+        "command": "push-reminder.keybindings.quit",
         "title": "Quit Visual Studio Code",
         "key": "ctrl+Q",
         "mac": "cmd+Q",
-        "when": "git-push-reminder.isActive && isWindows && config.git-push-reminder.enableQuitKeybindingOnWindows || git-push-reminder.isActive && isMac || git-push-reminder.isActive && isLinux"
+        "when": "push-reminder.isActive && isWindows && config.push-reminder.enableQuitKeybindingOnWindows || push-reminder.isActive && isMac || push-reminder.isActive && isLinux"
       },
       {
-        "command": "git-push-reminder.keybindings.quitEmptyWindow",
+        "command": "push-reminder.keybindings.quitEmptyWindow",
         "title": "Quit Visual Studio Code",
         "key": "ctrl+Q",
         "mac": "cmd+Q",
-        "when": "git-push-reminder.isActive && isWindows && config.git-push-reminder.enableQuitKeybindingOnWindows && config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups || git-push-reminder.isActive && isMac && config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups || git-push-reminder.isActive && isLinux && config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups"
+        "when": "push-reminder.isActive && isWindows && config.push-reminder.enableQuitKeybindingOnWindows && config.push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups || push-reminder.isActive && isMac && config.push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups || push-reminder.isActive && isLinux && config.push-reminder.closeTabShouldTryToCloseEmptyWindow && !editorIsOpen && !multipleEditorGroups"
       },
       {
-        "command": "git-push-reminder.keybindings.closeWindow",
+        "command": "push-reminder.keybindings.closeWindow",
         "title": "Close Window",
         "key": "ctrl+shift+W",
         "mac": "cmd+shift+W"
       },
       {
-        "command": "git-push-reminder.keybindings.closeWindow",
+        "command": "push-reminder.keybindings.closeWindow",
         "title": "Close Window",
         "key": "alt+f4",
         "when": "isLinux || isWindows"
       },
       {
-        "command": "git-push-reminder.keybindings.closeWindow",
+        "command": "push-reminder.keybindings.closeWindow",
         "title": "Close Editor",
         "key": "ctrl+W",
         "mac": "cmd+W",
-        "when": "!editorIsOpen && !multipleEditorGroups && config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow"
+        "when": "!editorIsOpen && !multipleEditorGroups && config.push-reminder.closeTabShouldTryToCloseEmptyWindow"
       },
       {
-        "command": "git-push-reminder.keybindings.closeWindow",
+        "command": "push-reminder.keybindings.closeWindow",
         "title": "Close Editor",
         "key": "ctrl+f4",
-        "when": "!editorIsOpen && !multipleEditorGroups && config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow && isWindows"
+        "when": "!editorIsOpen && !multipleEditorGroups && config.push-reminder.closeTabShouldTryToCloseEmptyWindow && isWindows"
       },
       {
-        "command": "git-push-reminder.keybindings.stopCloseEmptyWindow",
+        "command": "push-reminder.keybindings.stopCloseEmptyWindow",
         "title": "Close Editor",
         "key": "ctrl+W",
         "mac": "cmd+W",
-        "when": "isMac && !editorIsOpen && !multipleEditorGroups && !config.git-push-reminder.closeTabShouldTryToCloseEmptyWindow"
+        "when": "isMac && !editorIsOpen && !multipleEditorGroups && !config.push-reminder.closeTabShouldTryToCloseEmptyWindow"
       }
     ]
   },
