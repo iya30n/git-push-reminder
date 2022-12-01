@@ -36,10 +36,10 @@ const gitChecker = function () {
 		vscode.window.showWarningMessage("Did you push your code?", "Yes", "No")
 			.then(answer => {
 				if (answer == "Yes") {
-					vscode.window.showWarningMessage("Are you really sure you did it?", "Yes", "No")
+					vscode.window.showWarningMessage("Are you sure you did it?", "Yes", "No")
 						.then(answer => {
 							if (answer == "Yes") {
-								vscode.window.showWarningMessage("Oh man! look at my eyes. did you really push it?", "Yes", "No")
+								vscode.window.showWarningMessage("Oh man! look into my eyes. did you really push it?", "Yes", "No")
 									.then(answer => {
 										if (answer == "Yes") {
 											vscode.commands.executeCommand('workbench.action.quit')
